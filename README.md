@@ -18,7 +18,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-## CLI usage
+## CLI usage (For testing without UI)
 ```bash
 # Initialize a new vault
 python -m cloud_vault.cli init --db vault.db --user "Reed" --pw "MASTER_PASSWORD"
@@ -36,4 +36,4 @@ python -m cloud_vault.cli show --db vault.db --pw "MASTER_PASSWORD" --id 1 --rev
 - Each sensitive field is encrypted with **fresh nonces** using AES-GCM.
 - **No plaintext** is written to disk by this code beyond what you pass on the command line (avoid using `--pw` in real use; supply via prompt).
 - Add the Qt UI in Week 5–6 and call these functions from your slots.
--REMINDER login.py and main_window.py are 1 level up in the file tree from the other files, those 2 files sit in the CAPTONE folder and not the cloud_vault
+- REMINDER login.py and main_window.py are 1 level up in the file tree from the other files, those 2 files sit in the CAPTONE folder and not the cloud_vault
